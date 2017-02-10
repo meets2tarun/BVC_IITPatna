@@ -1,0 +1,321 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/slide_show.css">
+   <style>
+	body {
+		background-image: url("img/bg.jpg");
+		
+	} 
+	#inner {
+    display: table;
+    margin: 0 auto;
+	}  
+   </style> 
+	   
+	   
+	   
+</head>
+
+<body>
+
+<div >
+
+<div id="inner">
+
+<!--Add background color to get #cce6ff body style="background-color:#cce6ff;"-->
+<div >
+
+<div id="unused">
+
+</div>
+
+<div id="header" align="center" >
+<!--
+<h1 style="color:#cce6ff;background-color:black;text-align:center">Bhaktivedanta Club IIT Patna</h1>
+-->
+<img src="img/name.png" style="height:90px;width:850px;">
+
+</div>
+
+
+
+<div id="nav" >
+ 
+<ul style="list-style-type:none">
+  <li><a class="active" href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Home</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  
+  <li class="dropdown">
+    <a href="#" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>About Us</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <div class="dropdown-content">
+      <a href="aboutiitpbvcclub.html">BVC IITPatna</a>
+      <a href="activities.html">What We Do</a>
+      <a href="movement.html">Bhaktivedanta Movement</a>
+    </div>
+  </li>
+  
+   <li><a  href="article.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Articles</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+   <li><a  href="contact.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Selected Shlokas</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+    
+  <li><a  href="contact.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Contact Us</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li><a  href="links.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Useful Links</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+</ul>
+
+</div>
+
+<div id="section">
+<!--<h1>main div for all on the page</h1>-->
+<div align="center">
+ <img src="img/mantra.png" style="width:850px; " >
+</div>
+<div class="slideshow-container" style="background-color:black; border-radius: 5px; border: 4px ; padding: 2px;">
+
+<div class="mySlides fade" >
+  <img src="img/1.jpg" style="width:100%;height:350px">
+  <div class="text">Krishna- The Source of All</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/2.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/3.jpg" style="width:100%;height:350px">
+  <div class="text">Devotees during Bhajan</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/4.jpg" style="width:100%;height:350px">
+  <div class="text">Bhagvatam Class</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/5.jpg" style="width:100%;height:350px">
+  <div class="text">Food for All Program</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/6.jpg" style="width:100%;height:350px">
+  <div class="text">Yoga Camp</div>
+</div>
+
+
+<div class="mySlides fade">
+  
+  <img src="img/7.jpg" style="width:100%;height:350px">
+  <div class="text">A Cute Moment during A Visit</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/8.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/9.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<script>
+
+<!--manual slide show
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+-->
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
+
+
+<div id="section1" style="border-radius: 45px; border: 4px solid #73AD21; padding: 20px;">
+<!--section 1-->
+<div style="height:auto; width:auto;background-color: #cce6ff;">
+<!--Section 1.1-->
+
+
+
+<div style=" background-color:#cce6ff;float:left;border-radius: 25px; border: 4px ; padding: 20px;margin-bottom: .5cm;">
+<h1 style="font-family:monospace;color:blue;">Krishna: The Supreme Personality of Godhead</h1>
+
+<p><font size="3" >
+
+<img src="img/article1a.png"  style="width:500px;height:250px;display: block;
+    margin-left: auto;
+    margin-right: auto; " >
+ <br>
+ <p>
+<b>Translation</b>: Glorification of the Supreme Personality of Godhead is performed in 
+the paramparaa system, that is, it is conveyed from the spiritual master to disciple.
+ Such glorification is relished by those no longer interested in the false, temporary 
+ glorification of this cosmic manifestation. Descriptions of the Lord are the right medicine
+  for the conditioned soul undergoing repeated birth and death. Therefore, who will cease 
+  hearing such glorification of the Lord except a butcher or one who is killing his own self?
+<p>
+In the Western countries, when someone sees the cover of a book like Krishna, he immediately 
+asks, Who is Krishna? Who is the girl with Krishna? etc.
+<p>
+The immediate answer is that Krishna is the Supreme Personality of Godhead. How is that? Because
+ He conforms in
+exact detail to descriptions of the Supreme Being, the Godhead. In other words, Krishna is the 
+Godhead because He is all attractive. Outside the principle of all attraction, there is no 
+meaning to the word  Godhead. How is it one can be all attractive? First of all, if one is 
+very
+<br>
+ <img src="img/article1b.png" align="right" style="width:250px;height:350px;padding-left:15px;padding-bottom:15px; " >
+ 
+ wealthy, if he has great riches, he becomes attractive to the people in general. Similarly,
+  if someone is very powerful, he also becomes attractive, and if someone is very famous, 
+  he also becomes attractive, and if someone is very beautiful or wise or unattached to 
+  all kinds of possessions, he also becomes attractive. So from practical experience we 
+  can observe that one is attractive due to (1) wealth, (2) power, (3) fame, (4) beauty, 
+  (5) wisdom and (6) renunciation. One who is in possession of all six of these opulences
+   at the same time, who possesses them to an unlimited degree, is
+understood to be the Supreme Personality of Godhead. These opulences of the Godhead are
+ delineated by Paraasara Muni, a great Vedic authority.
+<p>We have seen many rich persons, many powerful persons, many famous persons, many beautiful
+ persons, many learned and scholarly persons, and persons in the renounced order of life 
+ unattached to material possessions. But we have never seen any one person who is
+  unlimitedly and simultaneously 
+wealthy, powerful, famous, beautiful, wise and unattached, like Krishna, in the history of 
+humanity. Krishna, the Supreme Personality of Godhead, is a historical person who appeared
+ on this earth 5,000 years ago. He stayed on this earth for 125 years and played exactly like
+  a human being, but His activities were unparalleled. From the very moment of His appearance 
+  to the moment of His disappearance, every one of His activities is unparalleled in the history
+   of the world, and therefore anyone who knows what we mean by Godhead will accept Krishna as the
+    Supreme Personality of Godhead. No one is equal to the Godhead, and no one is greater than Him.
+     That is the import of the familiar saying God is great.
+<p>There are various classes of men in the world who speak of God in different ways, but according
+ to the Vedic literatures and according to the great aacharyas, the authorized persons versed in
+  the
+knowledge of God in all ages, like aacharyas sanskara, Raamanuja, Madhva, Vishnu Svaami, Lord Chaitanya
+ and all their followers by disciplic succession, all unanimously agree that Krishna is the Supreme
+  Personality of Godhead. As far as we, the followers of Vedic civilization, are concerned, 
+  we accept the Vedic history of the whole universe, which consists of different planetary systems,
+   called Svargaloka, or the higher planetary system, Martyaloka, or the intermediary planetary 
+   system, and Paataalaloka, or the lower planetary system. The modern historians of this earth 
+   cannot supply historical evidences of events that occurred before 5,000 years ago, and the
+    anthropologists say that 40,000 years ago Homo sapiens had not appeared on this planet
+     because evolution had not reached that point. But the Vedic histories, such as the 
+     Puranas and Mahaabhaarata, relate human histories which extend millions and billions of 
+     years into the past.
+<p>For example, from these literatures we are given the histories of Krishna's appearances 
+and disappearances millions and billions of years ago. In the Fourth Chapter of the Bhagavad gitaa
+ Krishna tells Arjuna that both He and Arjuna had had many births before and that He (Krishna) 
+ could remember all of them but Arjuna could not. This illustrates the difference between the 
+ knowledge of Krishna and that of Arjuna. Arjuna might have been a very great warrior, a 
+ well cultured member of the Kuru dynasty, but after all, he was an ordinary human being, 
+ whereas Krishna, the Supreme Personality of Godhead, is the possessor of unlimited knowledge. 
+ Because He possesses unlimited knowledge, Krishna has a memory that is boundless.
+<p>Krishna's knowledge is so perfect that He remembers all the incidents of His appearances 
+some millions and billions of years in the past, but Arjuna's memory and knowledge are limited 
+by time and space, for he is an ordinary human being. In the Fourth Chapter Krishna states that
+ He can remember instructing the lessons of the Bhagavad gitaa some millions of years ago to
+  the sungod, Vivasvaan.
+<p>Nowadays it is the fashion of the atheistic class of men to try to become God by following
+ some mystic process. Generally the atheists claim to be God by dint of their imagination or 
+ their meditational prowess. Krishna is not that kind of God. He does not become God by 
+ manufac-turing some mystic process of meditation, nor does He become God by undergoing the severe
+  austerities of the mystic yogic exercises. Properly speaking, He never becomes God because He 
+  is the Godhead in all circumstances.
+<p>Within the prison of His maternal uncle Kansa, where His father and mother were confined, 
+Krishna appeared outside His mother's body as the four handed Visnu Naarayana.
+ Then He turned Himself into a baby and told His father to carry Him to the house of
+  Nanda Mahaaraja and his wife Yasodaa. When Krishna was just a small baby the gigantic 
+  demoness Putana attempted to kill Him, but when He sucked her breast He pulled out her 
+  life. That is the difference between the real Godhead and a God manufactured in the mystic
+   factory. Krishna had no chance to practice the mystic yoga process, yet He manifested 
+   Himself as the Supreme Personality of Godhead at every step, from infancy to childhood, 
+   from childhood to boyhood, and from boyhood to young manhood.
+
+
+</font></p>
+
+
+</div>
+<h4>
+
+</div>
+
+</div>
+
+<!--
+
+-->
+</div>
+
+<div id="footer" style="border-radius: 25px; border: 4px ; ">
+Copyright &#64; BVC IIT Patna
+</div>
+<div style="height:10px"></div>
+
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,320 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/slide_show.css">
+   <style>
+	body {
+		background-image: url("img/bg.jpg");
+		
+	} 
+	#inner {
+    display: table;
+    margin: 0 auto;
+	}  
+   </style> 
+	   
+	   
+	   
+</head>
+
+<body>
+
+<div >
+
+<div id="inner">
+
+<!--Add background color to get #cce6ff body style="background-color:#cce6ff;"-->
+<div >
+
+<div id="unused">
+
+</div>
+
+<div id="header" align="center" >
+<!--
+<h1 style="color:#cce6ff;background-color:black;text-align:center">Bhaktivedanta Club IIT Patna</h1>
+-->
+<img src="img/name.png" style="height:90px;width:850px;">
+
+</div>
+
+
+
+<div id="nav" >
+ 
+<ul style="list-style-type:none">
+  <li><a class="active" href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Home</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  
+  <li class="dropdown">
+    <a href="#" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>About Us</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <div class="dropdown-content">
+      <a href="aboutiitpbvcclub.html">BVC IITPatna</a>
+      <a href="activities.html">What We Do</a>
+      <a href="movement.html">Bhaktivedanta Movement</a>
+    </div>
+  </li>
+  
+   <li><a  href="article.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Articles</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+   <li><a  href="shloka.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Selected Shlokas</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+    
+  <li><a  href="contact.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Contact Us</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li><a  href="links.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Useful Links</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+</ul>
+
+</div>
+
+<div id="section">
+<!--<h1>main div for all on the page</h1>-->
+<div align="center">
+ <img src="img/mantra.png" style="width:850px; " >
+</div>
+<div class="slideshow-container" style="background-color:black; border-radius: 5px; border: 4px ; padding: 2px;">
+
+<div class="mySlides fade" >
+  <img src="img/1.jpg" style="width:100%;height:350px">
+  <div class="text">Krishna- The Source of All</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/2.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/3.jpg" style="width:100%;height:350px">
+  <div class="text">Devotees during Bhajan</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/4.jpg" style="width:100%;height:350px">
+  <div class="text">Bhagvatam Class</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/5.jpg" style="width:100%;height:350px">
+  <div class="text">Food for All Program</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/6.jpg" style="width:100%;height:350px">
+  <div class="text">Yoga Camp</div>
+</div>
+
+
+<div class="mySlides fade">
+  
+  <img src="img/7.jpg" style="width:100%;height:350px">
+  <div class="text">A Cute Moment during A Visit</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/8.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/9.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<script>
+
+<!--manual slide show
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+-->
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
+
+
+<div id="section1" style="border-radius: 45px; border: 4px solid #73AD21; padding: 20px;">
+<!--section 1-->
+<div style="height:auto; width:auto;background-color: #cce6ff;">
+<!--Section 1.1-->
+
+
+
+<div style=" background-color:#cce6ff;float:left;border-radius: 25px; border: 4px ; padding: 20px;margin-bottom: .5cm;">
+<h1 style="font-family:monospace;color:blue;">Absolute Theory in Science</h1>
+
+<p><font size="3" >
+
+<img src="img/article2a.png"  style="width:750px;height:250px;display: block;
+    margin-left: auto;
+    margin-right: auto; " >
+ <br>
+ <p>
+<b>Translation</b>: In time, learned philosophers or scientists might be able to
+ count all the atoms of the earth, the particles of snow, or perhaps even the 
+ shining molecules radiating from the sun, the stars and other luminaries. But among 
+ these learned men, who could possibly count the unlimited transcendental qualities
+  possessed by You, the Supreme Personality of Godhead, who have descended onto the 
+  surface of the earth for the benefit of all living entities?
+
+<p>
+There are 8.4 million species of living beings exists according to Padma Purana. Every species
+ in this creation is searching for truth, starting from the insect to human be-ing. Everyone is
+  seeking truth according their intelligent and level of understanding. Finding truth in a body 
+  of animal or insect or tree is not so easy and practical. However, a human being can easily
+   explore the possibilities of finding the truth. For example, an elephant is more
+powerful animal but is controlled by a tiny man, who has a very low capacity in term of strength.
+ Human beings are special because they have higher intelligence. Human beings can enquire 
+ about their existence, how this universe exists and how everything around him exists. 
+ Many philosophers, scientists, yogis struggled to understand the truth. Although many
+  theories, laws and processes are developed for searching for truth but in the due course
+   of time one process is replaced by another one. Hence, the truth which is found out
+    by these methods is not true in all situations, at all times and all circumstances but
+somehow the truth is very illusion. As time passes the theories are changing and what we 
+studied yesterday today it may change. Today's theory may modify tomorrow or get completely 
+rejected at some time. The whole body of knowledge based on hypothesis, observation, 
+verification and then law is called SCIENCE. Hence, we need to find out theories that 
+are never changing with respect to time, circumstance and person, such as speed of light 
+is absolute, which is true for all situations, theory of relativity so truth must be absolute.
+ Everyone has his own way of truth and falsehood but what is a unified conclusion? We search
+  the truth exactly like 6 blind men trying to understand an elephant. The story goes that....
+<p>
+Once upon a time, there lived 6 blind men in a village. One day the villagers told them,
+Hey, there is an elephant in the village today. They had no idea what an elephant is. 
+ They decided, Even though we would not be able to see it, let us go and feel it anyway. 
+ All of
+them went where the elephant was. Every one of them touched the elephant.
+ <div align="center">
+<img src="img/article2b.png"  style="width:550px;height:350px;" >
+</div>
+
+<p>Hey, the elephant is a pillar, said the first man who touched his leg.
+<p>OH NO! it is like a rope, said the second man who touched the tail.
+<p>OH NO! it is like a thick branch of a tree, said the third man who touched the trunk of the
+ elephant.
+<p>It is like a big hand fan said the fourth man who touched the ear of the elephant.
+<p>It is like a huge wall, said the fifth man who touched the belly of the elephant.
+<p>It is like a solid pipe, Said the sixth man who touched the tusk of the elephant.
+<p>They began to argue about the elephant and every one of them insisted that he was right. 
+It looked like they were getting agitated. A wise man was passing by and he saw this. He stopped
+ and asked them, What is the matter? They said, We cannot agree to what the elephant is like.
+  Each one of them told what he thought the elephant was like. The wise man calmly explained 
+  to them, All of you are right. The reason every one of you is telling it differently because 
+  each one of you touched the different part of the elephant. So, actually the elephant has all
+   those
+features what you all said.
+<p>If a person has eye he can perceive much more then what 6 blind men conceived. A medical doctor
+ may tell much more then you and me. Science has broad way of observation and it should not confine
+  only with observation and verification. The Absolute Truth is explained in Vedanta sutra
+  -Now is the time to inquire about the Absolute Truth.
+<p>
+The first aphorism in the Vedantasutra is athato brahma jijnasa. In the human form of life one 
+should put many questions to himself and to his intelligence. In the various forms of life lower
+ than human life the intelligence does not go beyond the range of life's primary necessities
+  namely eating, sleeping, mating and defending. Dogs, cats and tigers are always busy trying 
+  to find something to eat or a place to sleep, trying to defend and have sexual intercourse 
+  successfully. In the human form of life, however, one should be intelligent enough to ask what
+   he is, why he has come into the world, what his duty is, who is The Supreme Controller, what
+    is the difference between dull matter and the
+living entity, etc. There are so many questions, and the person who is actually intelligent should
+ simply inquire about the supreme source of everything: athato brahma jijnasa.
+<p>
+The example is given here that even if the most learned scholars could someday count the particles
+ of earth, snow and light, they would still fail to understand the qualities of the Lord. In this 
+ example earth,
+snow and light are progressively more subtle; thus it is to be understood that there is an
+ increasing difficulty in counting their virtually infinite particles. This is the unsolved 
+ problem of the universe which is given in Srimad Bhagavatam. Every scientist, philosopher and
+  yogi must take guidance from the holy books like Srimad Bhagavad Gita, Sri
+mad Bhagavatam, Quran, and Bible and know about absolute truth. A living entity who develops
+ the transcendental qualities found in the Lord receives immeasurable benefit and eventually 
+ goes with the Lord back to His own abode, where all living beings are liberated and fully 
+ endowed with the transcendental nature.
+
+
+
+</font></p>
+
+
+</div>
+<h4>
+
+</div>
+
+</div>
+
+<!--
+
+-->
+</div>
+
+<div id="footer" style="border-radius: 25px; border: 4px ; ">
+Copyright &#64; BVC IIT Patna
+</div>
+<div style="height:10px"></div>
+
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+</body>
+</html>

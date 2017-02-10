@@ -1,0 +1,59 @@
+<style>
+
+#unused {
+background-color:#ffff00;
+
+}
+
+#header {
+	width:1050px;
+  	 %%background-color:#ffff00;
+    color:black;
+    %%text-align:left;
+    %%padding:5px;
+}
+
+#nav {
+    %%line-height:10px;
+    background-color:black;
+    height:30px;
+    width:auto;
+    %%float:none;
+
+    padding: 5px;
+    padding-bottom: 15px;
+    
+}
+
+#section {
+    width:1050px;
+    float:left;
+    padding:10px;
+}
+#section1 {
+    width:auto;
+    margin-left:auto;
+  margin-right:auto;
+ height: auto;
+    padding:10px;
+   %% background-color: red;
+    float:left;
+    text-align: justify;
+    text-justify: inter-word;
+}
+#section2 {
+    width:130px;
+    margin-left:auto;
+  margin-right:auto;
+%%background-color: blue;
+    padding:10px;
+    float: right;
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+</style>

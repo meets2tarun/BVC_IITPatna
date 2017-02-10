@@ -1,0 +1,274 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/slide_show.css">
+   <style>
+	body {
+		background-image: url("img/bg.jpg");
+		
+	} 
+	#inner {
+    display: table;
+    margin: 0 auto;
+	}  
+   </style> 
+	   
+	   
+	   
+</head>
+
+<body>
+
+<div >
+
+<div id="inner">
+
+<!--Add background color to get #cce6ff body style="background-color:#cce6ff;"-->
+<div >
+
+<div id="unused">
+
+</div>
+
+<div id="header" align="center" >
+<!--
+<h1 style="color:#cce6ff;background-color:black;text-align:center">Bhaktivedanta Club IIT Patna</h1>
+-->
+<img src="img/name.png" style="height:90px;width:850px;">
+
+</div>
+
+
+
+<div id="nav" >
+ 
+<ul style="list-style-type:none">
+  <li><a class="active" href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Home</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  
+  <li class="dropdown">
+    <a href="#" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>About Us</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <div class="dropdown-content">
+      <a href="aboutiitpbvcclub.html">BVC IITPatna</a>
+      <a href="activities.html">What We Do</a>
+      <a href="movement.html">Bhaktivedanta Movement</a>
+    </div>
+  </li>
+  
+   <li><a  href="article.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Articles</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+   <li><a  href="shloka.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Selected Shlokas</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+    
+  <li><a  href="contact.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Contact Us</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li><a  href="links.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Useful Links</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+</ul>
+
+</div>
+
+<div id="section">
+<!--<h1>main div for all on the page</h1>-->
+<div align="center">
+ <img src="img/mantra.png" style="width:850px; " >
+</div>
+<div class="slideshow-container" style="background-color:black; border-radius: 5px; border: 4px ; padding: 2px;">
+
+<div class="mySlides fade" >
+  <img src="img/1.jpg" style="width:100%;height:350px">
+  <div class="text">Krishna- The Source of All</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/2.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/3.jpg" style="width:100%;height:350px">
+  <div class="text">Devotees during Bhajan</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/4.jpg" style="width:100%;height:350px">
+  <div class="text">Bhagvatam Class</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/5.jpg" style="width:100%;height:350px">
+  <div class="text">Food for All Program</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/6.jpg" style="width:100%;height:350px">
+  <div class="text">Yoga Camp</div>
+</div>
+
+
+<div class="mySlides fade">
+  
+  <img src="img/7.jpg" style="width:100%;height:350px">
+  <div class="text">A Cute Moment during A Visit</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/8.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/9.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<script>
+
+<!--manual slide show
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+-->
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
+
+
+<div id="section1" style="border-radius: 45px; border: 4px solid #73AD21; padding: 20px;">
+<!--section 1-->
+<div style="height:auto; width:auto;background-color: #cce6ff;">
+<!--Section 1.1-->
+
+
+
+<div style=" background-color:#cce6ff;float:left;border-radius: 25px; border: 4px ; padding: 20px;margin-bottom: .5cm;">
+<h1 style="font-family:monospace;color:blue;">Krishna Consciousness Movement </h1>
+
+<p><font size="3" >
+<p>
+Krishna consciousness movement has been going on since time immemorial by Lord Krishna, his various incarnations and his dear devotees. The word movement itself indicates a change of something. Like in history we find many movements, for example nonviolence movement etc. In this Krishna consciousness movement, what is the change that the Lord wants? The Lord wants the change in the consciousness of the living entity. What kind of change?  Prabhupad says, like a water drop from rain is pure until it touches the ground. As soon as it touches the ground, it becomes contaminated. Similarly, being the part and parcel of Lord Krishna the spirit soul is Satcitananda, its pure in its original form, but as soon as it touches the material platform it becomes contaminated. The consciousness, which is the symptom of the spirit soul, degrades and the sprit soul becomes more and
+more entangled through modes of material nature. Hence, on material platform
+ everybody has a degraded consciousness, which is leading to chaos in the society. 
+ The aim of human life is to elevate ourselves to Krishna Consciousness rather that 
+ degrading ourselves to animal consciousness. In Mahabharata, it is mentioned...
+<br><br>Ahara nidra bhaya maithunam ca
+<br>Samanyam etad pasubhir naranam
+<br>Dharmo hi tesam adhiko viseso
+<br>Dharmena hina pasubhir samana
+<p>This eating, sleeping, mating and defending is common between animals and human
+ beings. Then what is the difference between animal and human being? The only difference 
+ is Dharma. Without Dharma, a human being is same as animal. What is dharma? Is it
+  Hindu, Christian, Muslim or Sikh? No, it is the characteristic of spirit soul. 
+   Prabupada says, the characteristic of water is liquidity, similarly, the char
+acteristic of spirit soul is to serve. To serve whom? To serve Lord Krishna,
+ and become a servant of servant of servant of Lord, which is the constitutional 
+ position of every living entity. Lord Sri Krishna Caitanya Mahaprabhu, who is the 
+ father of this Krishna Consciousness movement in Kaliyuga says, Ekala isvara Krishna,
+  ara saba bhritya. Therefore, the aim of human life should be to revive our
+   constitutional position or our relationship with Lord Krishna. The main objective of
+    Krishna Consciousness movement is to remind the forgetful souls about their 
+    constitutional position and help them to go back to our own home that is the abode 
+    of Lord Sri Sri Radha Krishna.
+<p>The processes of this Krishna Consciousness movement as enunciated by Lord Caitanya
+ is as follws.
+<p>To practice Krishna consciousness in every aspect of our life through association of
+ pure devotees, reading books
+Hare Krishna Maha Mantra in beads and taking mahaprasad (foods offered to Lord).
+<p>Following the four regulative principles of No meat eating (develop mercy in our heart),
+ No illicit sex (maintain cleanliness externally and internally), No gambling 
+ (develop truthfulness in our heart), No intoxication (helps us doing austerity).
+<p>Participating in daily Krishna consciousness programs.
+<p>Participating in various Krishna consciousness programs.
+<p>Helping others to become Krishna conscious.
+<p>Distributing  Prabhupad Books.
+<p> Prabhupad says this Krishna consciousness movement will remain active upto ten thousand years
+ of which
+500 years have already passed. Those who are very fortunate souls will take part in this movement
+ in order to save themselves from the effect of Kali. Therefore, it is our duty to become Krishna 
+ conscious and help others become Krishna conscious.
+
+
+</font></p>
+
+
+</div>
+<h4>
+
+</div>
+
+</div>
+
+<!--
+
+-->
+</div>
+
+<div id="footer" style="border-radius: 25px; border: 4px ; ">
+Copyright &#64; BVC IIT Patna
+</div>
+<div style="height:10px"></div>
+
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+</body>
+</html>

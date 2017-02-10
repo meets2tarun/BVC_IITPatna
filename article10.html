@@ -1,0 +1,261 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/slide_show.css">
+   <style>
+	body {
+		background-image: url("img/bg.jpg");
+		
+	} 
+	#inner {
+    display: table;
+    margin: 0 auto;
+	}  
+   </style> 
+	   
+	   
+	   
+</head>
+
+<body>
+
+<div >
+
+<div id="inner">
+
+<!--Add background color to get #cce6ff body style="background-color:#cce6ff;"-->
+<div >
+
+<div id="unused">
+
+</div>
+
+<div id="header" align="center" >
+<!--
+<h1 style="color:#cce6ff;background-color:black;text-align:center">Bhaktivedanta Club IIT Patna</h1>
+-->
+<img src="img/name.png" style="height:90px;width:850px;">
+
+</div>
+
+
+
+<div id="nav" >
+ 
+<ul style="list-style-type:none">
+  <li><a class="active" href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Home</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  
+  <li class="dropdown">
+    <a href="#" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>About Us</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <div class="dropdown-content">
+      <a href="aboutiitpbvcclub.html">BVC IITPatna</a>
+      <a href="activities.html">What We Do</a>
+      <a href="movement.html">Bhaktivedanta Movement</a>
+    </div>
+  </li>
+  
+   <li><a  href="contact.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Articles</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+   <li><a  href="contact.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Selected Shlokas</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+    
+  <li><a  href="contact.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Contact Us</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li><a  href="links.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Useful Links</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+</ul>
+
+</div>
+
+<div id="section">
+<!--<h1>main div for all on the page</h1>-->
+<div align="center">
+ <img src="img/mantra.png" style="width:850px; " >
+</div>
+<div class="slideshow-container" style="background-color:black; border-radius: 5px; border: 4px ; padding: 2px;">
+
+<div class="mySlides fade" >
+  <img src="img/1.jpg" style="width:100%;height:350px">
+  <div class="text">Krishna- The Source of All</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/2.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/3.jpg" style="width:100%;height:350px">
+  <div class="text">Devotees during Bhajan</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/4.jpg" style="width:100%;height:350px">
+  <div class="text">Bhagvatam Class</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/5.jpg" style="width:100%;height:350px">
+  <div class="text">Food for All Program</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/6.jpg" style="width:100%;height:350px">
+  <div class="text">Yoga Camp</div>
+</div>
+
+
+<div class="mySlides fade">
+  
+  <img src="img/7.jpg" style="width:100%;height:350px">
+  <div class="text">A Cute Moment during A Visit</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/8.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/9.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<script>
+
+<!--manual slide show
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+-->
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
+
+
+<div id="section1" style="border-radius: 45px; border: 4px solid #73AD21; padding: 20px;">
+<!--section 1-->
+<div style="height:auto; width:auto;background-color: #cce6ff;">
+<!--Section 1.1-->
+
+
+
+<div style=" background-color:#cce6ff;float:left;border-radius: 25px; border: 4px ; padding: 20px;margin-bottom: .5cm;">
+<h1 style="font-family:monospace;color:blue;">Krishna, The Object of Meditation </h1>
+
+<p><font size="3" >
+
+<p>
+One who is engaged in Krisna consciousness is already a perfect yoga.
+ In fact, there is no difference between a Krisna conscious devotee always engaged in 
+ the transcendental loving service of Krisna and a perfect
+  yoga engaged in meditation on the Supersoul. There is no difference 
+  between a yoga in samaadhi (in a trance meditating on the Visnu form) and a 
+  Krisna conscious person engaged in different activities. The devotee even though engaged 
+  in various activities
+while in material existence 
+remains always situated in Krisna. 
+A devotee of the Lord, always acting in Krisna consciousness, is automatically liberated.
+ This is also confirmed in the Fourteenth Chapter of Bhagavad Gita (14.26):
+ <br>
+ <div align="center">
+ <img src="img/article10.png" align="middle" style="width:550px;height:350px " >
+ </div>
+ <br><br><br>
+ <p>"One who engages in full devotional service, who does not fall down in any circumstance, at once trans-cends the modes of material nature and thus comes to the level of Brahman."
+
+<div align="center">
+<img src="img/article10a.png"  style="width:350px;height:350px " >
+</div>
+<p align="right">-Excerpt from The Path of Perfection, Chapter 6
+
+
+
+
+
+
+</font></p>
+
+
+</div>
+<h4>
+
+</div>
+
+</div>
+
+<!--
+
+-->
+</div>
+
+<div id="footer" style="border-radius: 25px; border: 4px ; ">
+Copyright &#64; BVC IIT Patna
+</div>
+<div style="height:10px"></div>
+
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+</body>
+</html>

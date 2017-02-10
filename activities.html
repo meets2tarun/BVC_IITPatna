@@ -1,0 +1,436 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/slide_show.css">
+   <style>
+	body {
+		background-image: url("img/bg.jpg");
+		
+	} 
+	#inner {
+    display: table;
+    margin: 0 auto;
+	}  
+   </style> 
+	   
+	   
+	   
+</head>
+
+<body>
+
+<div >
+
+<div id="inner">
+
+<!--Add background color to get #cce6ff body style="background-color:#cce6ff;"-->
+<div >
+
+<div id="unused">
+
+</div>
+
+<div id="header" align="center" >
+<!--
+<h1 style="color:#cce6ff;background-color:black;text-align:center">Bhaktivedanta Club IIT Patna</h1>
+-->
+<img src="img/name.png" style="height:90px;width:850px;">
+
+</div>
+
+
+
+<div id="nav" >
+ 
+<ul style="list-style-type:none">
+  <li><a class="active" href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Home</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  
+  <li class="dropdown">
+    <a href="#" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>About Us</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <div class="dropdown-content">
+      <a href="aboutiitpbvcclub.html">BVC IITPatna</a>
+      <a href="activities.html">What We Do</a>
+      <a href="movement.html">Bhaktivedanta Movement</a>
+    </div>
+  </li>
+  
+   <li><a  href="contact.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Articles</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+   <li><a  href="shloka.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Selected Shlokas</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+    
+  <li><a  href="contact.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Contact Us</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li><a  href="links.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Useful Links</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+</ul>
+
+</div>
+
+<div id="section">
+<!--<h1>main div for all on the page</h1>-->
+<div align="center">
+ <img src="img/mantra.png" style="width:850px; " >
+</div>
+<div class="slideshow-container" style="background-color:black; border-radius: 5px; border: 4px ; padding: 2px;">
+
+<div class="mySlides fade" >
+  <img src="img/1.jpg" style="width:100%;height:350px">
+  <div class="text">Krishna- The Source of All</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/2.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/3.jpg" style="width:100%;height:350px">
+  <div class="text">Devotees during Bhajan</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/4.jpg" style="width:100%;height:350px">
+  <div class="text">Bhagvatam Class</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/5.jpg" style="width:100%;height:350px">
+  <div class="text">Food for All Program</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/6.jpg" style="width:100%;height:350px">
+  <div class="text">Yoga Camp</div>
+</div>
+
+
+<div class="mySlides fade">
+  
+  <img src="img/7.jpg" style="width:100%;height:350px">
+  <div class="text">A Cute Moment during A Visit</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/8.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/9.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<script>
+
+<!--manual slide show
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+-->
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
+
+
+<div id="section1" style="text-align: justify;text-justify: inter-word;border-radius: 45px; border: 4px solid #73AD21; padding: 20px;">
+<!--section 1-->
+<div style="height:auto; width:auto;background-color: #cce6ff;">
+<!--Section 1.1-->
+
+
+<div style=" background-color:#cce6ff;float:left;border-radius: 25px; border: 4px ; padding: 20px;margin-bottom: .5cm;">
+<h1 style="font-family:monospace;color:blue;">Food for All</h1>
+<div style="background-color:#cce6ff; float:left;border-radius: 25px; border: 1px solid  ; padding: 20px;margin-bottom: .5cm;text-align: justify;text-justify: inter-word;">
+	<img src="img/food1.jpg" align="right" style="width:450px;height:350px;padding-left:10px;padding-bottom:10px; " >
+<p><font size="4" >
+Bhaktivedanta Club IIT Patna organize games and dramas (designed to teach ethics and manners)
+ followed by a delicious nutrition food for the unprivileged school children of the nearby
+  villages. In the end of every month this Food for All program will be organised 
+  under the support and guidance of the faculties of IIT Patna.
+  <br><br> You all are cordially
+   invited for the same.
+</font></p>
+</div>
+</div>
+
+
+
+<div style=" background-color:#cce6ff;float:left;border-radius: 25px; border: 4px ; padding: 20px;margin-bottom: .5cm;">
+<h1 style="font-family:monospace;color:blue;">YOGA RETREATMENT CAMPS</h1>
+	
+<div style="background-color:#cce6ff; float:left;border-radius: 25px; border: 1px solid  ; padding: 20px;margin-bottom: .5cm;">
+<h2>In Campus</h2>
+<img src="img/yoga.jpg" align="right" style="width:450px;height:350px;padding-left:10px;padding-bottom:10px; " >
+<p><font size="4" >
+Bhaktivedanta Club IIT Patna regularly organizes the Yoga Camps.
+In the beautiful, green and peaceful campus the activities of the camp 
+introduces to a new dimension of life. <br>The activities includes:
+<ul>
+<li>Yoga-Discussion and Practice Session</li><br>
+<li>Mantra Meditation</li><br>
+<li>Melodius Kirtan</li><br>
+<li>Delicious Prasadam</li>
+</ul> 
+  <br><br> We invite you to join us in the next camp and have a beautiful experience. 
+</font></p>
+
+</div>
+
+<div style="background-color:#cce6ff; float:left;border-radius: 25px; border: 1px solid  ; padding: 20px;margin-bottom: .5cm;">
+<h2>RAJGIR</h2>
+<img src="img/rajgir.png" align="right" style="width:450px;height:350px;padding-left:10px;padding-bottom:10px; " >
+<p><font size="4" >
+Rajgir is situated 84 Km. away from Patna. We had one day trip to Rajgir on 22nd March 2015.
+ The journey was short and pleasant. Delicious Prasadam was made by Dhiren Nayak,
+  Lucky Kumar and other club members. The coordinators for this trip were Deepak 
+  Chandapure and Raviteja B. Vishwa Shanti Stupa, situated 1000 ft. above the
+   ground on a hill, is the main attraction. All the members decided to climb the
+   
+    hill by foot and it was really exciting and adventurous. It is a magnificent
+     place with scenic beauty and spiritual aura.
+The whole journey was made memorable by the continuous kirtana and the talks given by
+ Dr. Ranjan Kumar Behera. After visiting some nearby places, we returned to Patna.
+</font></p>
+
+</div>
+
+
+<div style="background-color:#cce6ff; float:right;border-radius: 25px; border: 1px solid ; padding: 20px;margin-bottom: .5cm;">
+<h2>SRI MAYAPUR DHAM</h2>
+<img src="img/mayapur.png" align="right" style="width:450px;height:350px;padding-left:10px;padding-bottom:10px; " >
+<p><font size="4" >
+Mayapur, an island in the Navadweep district of West Bengal, is the birth place of Lord Caitanya
+ Mahaprabhu. It is due to His causeless mercy that we had the chance to visit Mayapur. We boarded
+  the train from Patna to Vardhman. Mayapur Devotees arranged temple taxi and we safely
+reached Sri Mayapur Dham. After reaching Mayapur, we visited ISKCON Shri Chandrodaya Mandir where
+ Panchatatva, Narsmha Dev and Radha Madhava with Ashta Sakhis reside. Just a glimpse of them filled
+  our hearts with ecstasy. After the darsana, we attended a video lecture of A.C. Bhaktivedanta
+   Swami Prabhupada, and then visited many popular & sacred places like Bhakti Vinod Thakur's 
+   school and Shri Chaitanya Mahaprabhu's birthplace. They are the most important places among 
+   the Vaishnavas, and so are always crowded with devotees. The Mayapur Dhama is the original 
+   home of all the living entities, Vaikuntha on earth. We returned with blissful hearts, filled
+    with unparalleled love for Lord Caitanya Mahaprabhu.
+</font></p>
+</div>
+
+</div>
+
+
+
+
+<div style=" background-color:#cce6ff;float:left;border-radius: 25px; border: 4px ; padding: 20px;margin-bottom: .5cm;">
+<h1 style="font-family:monospace;color:blue;">FESTIVALS</h1>
+	
+<div style="background-color:#cce6ff; float:left;border-radius: 25px; border: 1px solid  ; padding: 20px;margin-bottom: .5cm;">
+<h2>SHRI Krishna JANMASHTAMI</h2>
+<img src="img/2.jpg" align="right" style="width:450px;height:350px;padding-left:10px;padding-bottom:10px; " >
+<p><font size="4" >
+Janmashtami, the appearance day of the Supreme Personality of Godhead, Sri Krishna is the
+ most important festival for one and all. It was on this eighth day (ashtami) of the Krsna
+  paksha of Shravana month that Sri Krsna appeared in Mathura. Lord Sri Krsna was born
+   to Mother Devaki at midnight in the prison house of Kansa, and had
+shown His four handed form to His parents just after His birth.
+The Bhaktivedanta club celebrated Janmashtami with great enthusiasm. The preparations had 
+started a month earlier, with various committees setup for different purposes. On the occasion
+ of Janmashtami the Club organized Vedic quiz and painting competitions. The Janmashtami day 
+ was celebrated with many cultural activities such as devotional dance, 
+ kirtan, drama and cultural fancy 
+dress. The melodious sankirtana and the enlightening seminar by Dr. Ranjan Kumar Behera on Krisna
+ Consciousness were the major attractions of the night.
+There was active participation from more than 800 people from all over Patna,
+along with the IIT Patna fraternity. Prizes and certificates were distributed among the winners 
+and participants of different events . The program ended with mid night kirtan and Abhishekam of
+ the Lord, followed by delicious prasadam prepared by Dr. Manoranjan Kar. The
+  atmosphere was charged with
+ immense love for Krsna, which seamlessly mingled into everyones hearts. Dr. Sanjoy K. Parida 
+ coordinated the whole program.
+</font></p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div style=" background-color:#cce6ff;float:left;border-radius: 25px; border: 4px ; padding: 20px;margin-bottom: .5cm;">
+<h1 style="font-family:monospace;color:blue;">Love Feast Program every Saturday</h1>
+	
+<div style="background-color:#cce6ff; float:left;border-radius: 25px; border: 1px solid  ; padding: 20px;margin-bottom: .5cm;">
+
+<img src="img/sat.jpg" align="right" style="width:450px;height:350px;padding-left:10px;padding-bottom:10px; " >
+<p><font size="4" >
+You are CORDIALLY INVITED to attend Love Feast Program every Saturday evening from 06:30 PM to
+ 08:30 PM. They consist of Gaura Arati, Sankirtan, Lecture on Vedic Scripture and delicious
+  vegetarian feast.
+
+
+</font></p>
+
+</div>
+
+</div>
+
+
+
+<div style=" background-color:#cce6ff;float:left;border-radius: 25px; border: 4px ; padding: 20px;margin-bottom: .5cm;">
+<h1 style="font-family:monospace;color:blue;">BOOK DISTRIBTION</h1>
+<div style="background-color:#cce6ff; float:left;border-radius: 25px; border: 1px solid  ; padding: 20px;margin-bottom: .5cm;">
+	<img src="img/book1.jpg" align="right" style="width:450px;height:350px ;padding-left:10px;padding-bottom:10px;" >
+<p><font size="4" >
+Prabhupada's Appeal to his Devotees:- So kindly help me. This is my request. Print as many
+ books in as many languages and distribute throughout the whole world. Then Krishna consciousness 
+ movement will automatically increase.
+This year during Jagannath Ratha Yatra and during Anwesha (Annual Techno cultural fest of IIT Patna),
+ by the mercy of Prabhupada the Bhaktivedanta Club, IIT Patna has distributed
+  Bhagavad Gita As It Is and other books written by A.C. Bhaktivedanta Swami. We pray to His
+   Divine Grace that the book distribution by the devotees continues throughout the year. All
+    the devotees of the Club participated in this great welfare activitiy.
+</font></p>
+</div>
+</div>
+
+
+<div style=" background-color:#cce6ff;float:left;border-radius: 25px; border: 4px ; padding: 20px;margin-bottom: .5cm;">
+<h1 style="font-family:monospace;color:blue;">VISITS OF VAISNAVAS</h1>
+	
+<div style="background-color:#cce6ff; float:left;border-radius: 25px; border: 1px solid  ; padding: 20px;margin-bottom: .5cm;">
+<h2>H. H. PRABHODANANDA SWAMI MAHARAJA</h2>
+<img src="img/visit1.png" align="right" style="width:450px;height:350px ;padding-left:10px;padding-bottom:10px;" >
+<p><font size="4" >
+H. H. Prabhodananda Saraswati Maharaja is a Tridandi Sanyasi under the flagship of ISKCON. 
+He is a versatile and dynamic preacher of Indian Culture based on Krishna Consciousness 
+through out the world. His preaching area includes India (Patna, Delhi, Mathura, Rourkela etc.)
+ and abroad (United Kingdom USA, SA, Durban etc.).He is a permanent resident of Vrajabhumi. 
+ Sometimes he visits our club out of his causeless mercy to distribute the love of Godhead 
+ and share the loving Pastimes of the Supreme Lord Sri Krishna. He visited in September 2014
+  and delivered many lectures on Vaishnava etiquettes and discussed about stum-bling blocks
+   on the path of devotional service. He gave scholarly references from many scriptures and 
+   discussed how these stumbling blocks should be well known so that we can remove them from 
+   root. At the end he performed very nice dancing kirtan
+in his melodious voice. Finally, after spending four memorable days with us, he left for his 
+next preaching destination. The club is always indebted to Maharaja for his visit to Patna.
+
+</font></p>
+
+</div>
+
+<div style="background-color:#cce6ff; float:left;border-radius: 25px; border: 1px solid  ; padding: 20px;margin-bottom: .5cm;">
+<h2>H G SUNDAR GOPAL DAS</h2>
+<img src="img/visit2.png" align="right" style="width:450px;height:350px ;padding-left:10px;padding-bottom:10px;" >
+<p><font size="4" >
+HG Sundar Gopal Das visited IIT Patna on 27th October 2014. He delivered a seminar on 
+How Spirituality and Technology is interconnected. He explained the topic very nicely with
+ the help of videos. The session ended with delicious Prasadam.  Prabhupada, the
+  founder acharya of ISKCON was always very eager that scientists and technologists 
+  understand and appreciate the value of spirituality in benefitting humanity. 
+  He therefore wrote books like Easy journey to other planets and established the BI
+   or BhaktiVedanta Institute .
+</font></p>
+
+</div>
+
+
+<div style="background-color:#cce6ff; float:right;border-radius: 25px; border: 1px solid ; padding: 20px;margin-bottom: .5cm;">
+<h2>H.H. Bhaktiashraya Vaishnava Swami MAHARAJ</h2>
+<img src="img/visit3.png" align="right" style="width:450px;height:350px;padding-left:10px;padding-bottom:10px; " >
+<p><font size="4" >
+H. H. Bhaktiashraya Vaishnava Swami Maharaj is a Tridandi sanyasi. He regularly visits our club
+ and is a resident of Vraja Dhama. After long time he blessed us with his august presence in
+  the beginning of this year. He is well known for presenting antique stories about different
+   holy places of the India. In other words, he is a living encyclopedia of all holy places 
+   of India. This time he presented stories on glories of Lord Jagannatha and also gave lectures 
+   on many topics like Money is sweeter than Honey, Gaura Avtar, Sharnagati, Strongest among senses,
+    Values of human life, Who is God etc. He delivered a institute lecture at IIT Patna and 
+    systematically he discussed the values of human life from the scripture.
+</font></p>
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+<!--
+
+-->
+</div>
+
+<div id="footer" style="border-radius: 25px; border: 4px ; ">
+Copyright &#64; BVC IIT Patna
+</div>
+<div style="height:10px"></div>
+
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+</body>
+</html>

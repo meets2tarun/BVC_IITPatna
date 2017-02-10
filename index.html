@@ -1,0 +1,340 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/slide_show.css">
+   <style>
+	body {
+		background-image: url("img/bg.jpg");
+		background-color: #cccccc;
+		
+	} 
+	#inner {
+    display: table;
+    margin: 0 auto;
+	}  
+   </style> 
+	   
+	   
+	   
+</head>
+
+<body>
+
+<div >
+
+<div id="inner">
+
+<!--Add background color to get #cce6ff body style="background-color:#cce6ff;"-->
+<div >
+
+<div id="unused">
+
+</div>
+
+<div id="header" align="center" >
+<!--
+<h1 style="color:#cce6ff;background-color:black;text-align:center">Bhaktivedanta Club IIT Patna</h1>
+-->
+<img src="img/name.png" style="height:90px;width:850px;">
+
+</div>
+
+
+
+<div id="nav" >
+ 
+<ul style="list-style-type:none">
+  <li><a class="active" href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Home</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  
+  <li class="dropdown">
+    <a href="#" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>About Us</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <div class="dropdown-content">
+      <a href="aboutiitpbvcclub.html">BVC IITPatna</a>
+      <a href="activities.html">What We Do</a>
+      <a href="movement.html">Bhaktivedanta Movement</a>
+    </div>
+  </li>
+  
+   <li><a  href="article.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Articles</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+   <li><a  href="shloka.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Selected Shlokas</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+    
+  <li><a  href="contact.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Contact Us</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li><a  href="links.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Useful Links</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+</ul>
+
+</div>
+
+<div id="section">
+<!--<h1>main div for all on the page</h1>-->
+<div align="center">
+ <img src="img/mantra.png" style="width:850px; " >
+</div>
+<div class="slideshow-container" style="background-color:black; border-radius: 5px; border: 4px ; padding: 2px;">
+
+<div class="mySlides fade" >
+  <img src="img/1.jpg" style="width:100%;height:350px">
+  <div class="text">Krishna- The Source of All</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/2.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/3.jpg" style="width:100%;height:350px">
+  <div class="text">Devotees during Bhajan</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/4.jpg" style="width:100%;height:350px">
+  <div class="text">Bhagvatam Class</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/5.jpg" style="width:100%;height:350px">
+  <div class="text">Food for All Program</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/6.jpg" style="width:100%;height:350px">
+  <div class="text">Yoga Camp</div>
+</div>
+
+
+<div class="mySlides fade">
+  
+  <img src="img/7.jpg" style="width:100%;height:350px">
+  <div class="text">A Cute Moment during A Visit</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/8.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/9.jpg" style="width:100%;height:350px">
+  <div class="text">Janmasthami Celebration</div>
+</div>
+
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+
+<!--manual slide show
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+-->
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+<div id="section1" style="border-radius: 45px; border: 4px solid #73AD21; padding: 20px;text-align: justify;text-justify: inter-word;">
+<!--section 1-->
+<div style="height:auto; width:auto;background-color: #cce6ff;">
+<!--Section 1.1-->
+
+<div style="background-color:#cce6ff;height:auto; width:430px;float:left;margin-bottom: 1cm; border-radius: 25px; border: 4px ; padding: 20px; ">
+<h1 style="font-family:monospace;color:blue;">IITP BVC Club</h1>
+<p><font size="4" >
+BhaktiVedanta Club IIT
+Patna was incepted in
+2009 with an aim of
+spreading Krishna Consciousness among IIT Patna fraternity. This club is
+very unique and it caters
+all the members for their
+spiritual as well as material
+ needs. The club helps one
+realize one's true identity as
+a spirit ... 
+</font></p>
+<h4 style="float:right">
+<a href="aboutiitpbvcclub.html">Click to read more</a>
+</h4>
+</div>
+
+
+<div style="background-color:#cce6ff;height:auto; width:430px;float:right;margin-bottom: 1cm;border-radius: 25px; border: 4px; padding: 20px;">
+<h1 style="font-family:monospace;color:blue;">Bhaktivedanta Movement</h1>
+ <img src="img/prabhupada.jpg" align="right" style="width:150px;height:150px ;padding-left:10px;padding-bottom:10px;" >
+<p><font size="4" >
+The International Society for Krishna Consciousness (ISKCON) also known as 
+the Hare Krishna movement, is a branch of the Gaudiya Vaishnava spiritual tradition 
+with the origin Krishna Himself as the Supreme Personality ...
+
+</font></p>
+<h4 style="float:right">
+<a href="movement.html">Click to read more</a>
+</h4>
+</div>
+
+
+<div style="background-color:#cce6ff;float:left;height:auto; width:auto;margin-bottom: 1cm;border-radius: 25px; border: 4px ; padding: 20px;">
+<h1 style="font-family:monospace;color:blue;">Selected Shloka</h1>
+
+<img src="img/shloka/8_7.png" style="width:750px;">
+<br>
+<h4 style="float:right">
+<a href="shloka.html">Click to read more</a>
+</h4>
+</div>
+
+<div id="section2" style="background-color:#cce6ff;border-radius: 25px; border: 4px; padding: 20px;height:350px">
+<p><a href="https://www.youtube.com/channel/UCFIwZSpeqfCON8Wer4l_YZw">
+<img border="0" alt="BVC IIT Patna" src="img/youtube.png" width="100" height="100"></a></p>
+
+<p><a href="#">
+<img border="0" alt="BVC IIT Patna" src="img/gp.png" width="100" height="50"></a> </p>
+
+<p><a href="https://www.facebook.com/BVCIITP/?fref=ts">
+<img border="0" alt="BVC IIT Patna" src="img/fb.jpg" width="60" height="60"></a> </p>
+
+<p><a href="contact.html">Contact Us</a></p>
+</div>
+
+<div style=" background-color:#cce6ff;float:left;border-radius: 25px; border: 4px ; padding: 20px;margin-bottom: .5cm;">
+<h1 style="font-family:monospace;color:blue;">Articles</h1>
+<div style="background-color:#cce6ff;width:430px; float:left;border-radius: 25px; border: 1px solid  ; padding: 20px;margin-bottom: .5cm;">
+<p><font size="4" >
+<h3 style="color:blue">Krishna: The Supreme Personality of Godhead</h3><br>
+In the Western countries, when someone sees the cover of a book like Krishna, he immediately asks, Who is Krishna? Who is the girl with Krishna?
+ The immediate answer is that Krishna is the Supreme Personality of ...
+</font></p>
+<h4 style="float:right">
+<a href="article1.html">read more</a></h4>
+</div>
+
+
+<div style="background-color:#cce6ff;width:430px; float:right;border-radius: 25px; border: 1px solid ; padding: 20px;margin-bottom: .5cm;">
+<p><font size="4" ><h3 style="color:blue">Absolute Theory in Science</h3><br>
+There are 8.4 million species of living beings exists according to Padma Purana. Every species in this creation is searching for truth
+, starting from the insect to human being. 
+Everyone is seeking truth according their intelligent and level 
+of understanding. Finding truth in a body of animal or insect or ...
+</font></p>
+<h4 style="float:right">
+<a href="article2.html">read more</a></h4>
+</div>
+
+
+<div style="background-color:#cce6ff;width:430px; float:left;border-radius: 25px; border: 1px solid ; padding: 20px;;margin-bottom: .5cm;">
+<p><font size="4" ><h3 style="color:blue">Perfect Knowledge, Imperfect World</h3><br>
+This conversation between His Divine Grace A.C. Bhaktivedanta Swami Prabhupada and physicist 
+Gregory Benford took place 
+Krishna center.
+<br>
+<i>Dr. Benford: </i>You are probably familiar with what Western theology calls "the 
+problem of evil". Why does evil exist? 
+<br>
+<i>Srila Prabhupada:</i> Evil is the absence of good, just ...
+</font></p>
+<h4 style="float:right">
+<a href="article5.html">read more</a></h4>
+</div>
+
+
+<div style="background-color:#cce6ff;width:430px; float:right;border-radius: 25px; border: 1px solid ; padding: 20px;;margin-bottom: .5cm;">
+<p><font size="4" ><p><font size="4" ><h3 style="color:blue">Mystery of Bhagvad Gita</h3><br>
+Just like you'll find in the Bhagavad Gita that Krisna requesting Arjuna
+ to become a yogi, but He never asked him to cease from the fight. 
+How one can become a yogi, at the same time remain a fighter? That, a 
+practical example you see. Krisna is asking Arjuna, tasmaad yogi bhavaarjuna, 
+"My dear Arjuna, therefore you become a yogi." ...
+<h4 style="float:right">
+<a href="article7.html">read more</a></h4>
+</div>
+<h4 style="float:right">
+<a href="article.html">read more articles</a></h4>
+
+</div>
+
+<div>
+
+
+</div>
+
+</div>
+
+</div>
+
+<!--
+
+-->
+</div>
+
+<div id="footer" style="border-radius: 25px; border: 4px ; ">
+Copyright &#64; BVC IIT Patna
+</div>
+<div style="height:10px"></div>
+
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+</body>
+</html>
